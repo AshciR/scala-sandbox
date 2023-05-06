@@ -5,9 +5,31 @@ def main(): Unit = {
   //  arrayExample()
   //  listExample()
   //  tupleExample()
-  setExample()
+  //  setExample()
+  //  mapExample()
+  optionalValues()
 }
 
+def optionalValues(): Unit = {
+
+  val names = List("Richie", "Sasha", "Daniel")
+  val nameWithR = names.find(n => n.startsWith("R"))
+  val nameWithZ = names.find(n => n.startsWith("Z"))
+
+  println(nameWithR.map(n => n.toLowerCase()))
+  println(nameWithZ.map(n => n.toLowerCase()))
+
+}
+
+def mapExample(): Unit = {
+  val drinks = Map(
+    1 -> "Coffee",
+    2 -> "Tea",
+    3 -> "Chai",
+  )
+  println(drinks)
+  println(drinks(2))
+}
 
 def setExample(): Unit = {
   val cities = Set("Kingston", "Miami", "Vegas")
